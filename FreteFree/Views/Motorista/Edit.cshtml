@@ -1,0 +1,18 @@
+﻿@model FreteFree.Models.Motorista.Motorista
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Motorista</h4>
+<hr />
+<partial name="_CreateEdite" />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

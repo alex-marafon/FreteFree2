@@ -1,0 +1,64 @@
+﻿
+
+@model IEnumerable<FreteFree.Models.Motorista.OrdemCarregamento>
+
+@{
+    ViewData["Title"] = "Historico";
+}
+
+<h3>Historico de Carregamento</h3>
+
+
+<table class="table" id='myFrame'>
+    <thead>
+        <tr>
+            <th>
+                ID Carga
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medida)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataOrdemCarregamento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrdemCarregamentoId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Empresa.NomeEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Motorista.NomeMotorista)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Medida)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Detalhado</a> |
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

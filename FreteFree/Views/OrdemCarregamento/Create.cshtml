@@ -1,0 +1,20 @@
+﻿@model FreteFree.Models.Motorista.OrdemCarregamento
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OrdemCarregamento</h4>
+<hr />
+
+<partial name="_Create_Edite" />
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

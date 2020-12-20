@@ -1,0 +1,155 @@
+﻿@model IEnumerable<FreteFree.Models.Motorista.Motorista>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CaminhaoProprietario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoProprietario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneProprietario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCaminhao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacaCavalo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CidadeCavalo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCavalo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacaCarreta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CidadeCarreta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoCarreta)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EnderecoMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneMovel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelefoneFixo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CidadeMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstadoMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CPFMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RGMotorista)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CNPJ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCadastoMotorista)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaminhaoProprietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoProprietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneProprietario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCaminhao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaCavalo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidadeCavalo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCavalo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacaCarreta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidadeCarreta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoCarreta)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnderecoMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneMovel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelefoneFixo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CidadeMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPFMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RGMotorista)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNPJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastoMotorista)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MotoristaId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MotoristaId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MotoristaId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

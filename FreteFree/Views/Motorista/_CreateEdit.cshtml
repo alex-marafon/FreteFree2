@@ -1,0 +1,120 @@
+﻿@model FreteFree.Models.Motorista.Motorista
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CaminhaoProprietario" class="control-label"></label>
+                <input asp-for="CaminhaoProprietario" class="form-control" />
+                <span asp-validation-for="CaminhaoProprietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnderecoProprietario" class="control-label"></label>
+                <input asp-for="EnderecoProprietario" class="form-control" />
+                <span asp-validation-for="EnderecoProprietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefoneProprietario" class="control-label"></label>
+                <input asp-for="TelefoneProprietario" class="form-control" />
+                <span asp-validation-for="TelefoneProprietario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoCaminhao" class="control-label"></label>
+                <select asp-for="TipoCaminhao" class="form-control"></select>
+                <span asp-validation-for="TipoCaminhao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlacaCavalo" class="control-label"></label>
+                <input asp-for="PlacaCavalo" class="form-control" />
+                <span asp-validation-for="PlacaCavalo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CidadeCavalo" class="control-label"></label>
+                <input asp-for="CidadeCavalo" class="form-control" />
+                <span asp-validation-for="CidadeCavalo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCavalo" class="control-label"></label>
+                <select asp-for="EstadoCavalo" class="form-control"></select>
+                <span asp-validation-for="EstadoCavalo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlacaCarreta" class="control-label"></label>
+                <input asp-for="PlacaCarreta" class="form-control" />
+                <span asp-validation-for="PlacaCarreta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CidadeCarreta" class="control-label"></label>
+                <input asp-for="CidadeCarreta" class="form-control" />
+                <span asp-validation-for="CidadeCarreta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoCarreta" class="control-label"></label>
+                <select asp-for="EstadoCarreta" class="form-control"></select>
+                <span asp-validation-for="EstadoCarreta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeMotorista" class="control-label"></label>
+                <input asp-for="NomeMotorista" class="form-control" />
+                <span asp-validation-for="NomeMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EnderecoMotorista" class="control-label"></label>
+                <input asp-for="EnderecoMotorista" class="form-control" />
+                <span asp-validation-for="EnderecoMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefoneMovel" class="control-label"></label>
+                <input asp-for="TelefoneMovel" class="form-control" />
+                <span asp-validation-for="TelefoneMovel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelefoneFixo" class="control-label"></label>
+                <input asp-for="TelefoneFixo" class="form-control" />
+                <span asp-validation-for="TelefoneFixo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CidadeMotorista" class="control-label"></label>
+                <input asp-for="CidadeMotorista" class="form-control" />
+                <span asp-validation-for="CidadeMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EstadoMotorista" class="control-label"></label>
+                <select asp-for="EstadoMotorista" class="form-control"></select>
+                <span asp-validation-for="EstadoMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CPFMotorista" class="control-label"></label>
+                <input asp-for="CPFMotorista" class="form-control" />
+                <span asp-validation-for="CPFMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RGMotorista" class="control-label"></label>
+                <input asp-for="RGMotorista" class="form-control" />
+                <span asp-validation-for="RGMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CNPJ" class="control-label"></label>
+                <input asp-for="CNPJ" class="form-control" />
+                <span asp-validation-for="CNPJ" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataCadastoMotorista" class="control-label"></label>
+                <input asp-for="DataCadastoMotorista" class="form-control" />
+                <span asp-validation-for="DataCadastoMotorista" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
