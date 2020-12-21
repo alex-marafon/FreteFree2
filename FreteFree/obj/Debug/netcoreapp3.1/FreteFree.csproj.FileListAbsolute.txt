@@ -347,7 +347,6 @@ C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\V
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\Details.cshtml.g.cs
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\Edit.cshtml.g.cs
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\Index.cshtml.g.cs
-C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\_CreateEdit.cshtml.g.cs
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\_DetailsDelete.cshtml.g.cs
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\OrdemCarregamento\Create.cshtml.g.cs
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\OrdemCarregamento\Delete.cshtml.g.cs
@@ -368,3 +367,4 @@ C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\FreteFr
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\FreteFree.dll
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\FreteFree.pdb
 C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\FreteFree.genruntimeconfig.cache
+C:\Users\Trut4\Source\Repos\FreteFree2\FreteFree\obj\Debug\netcoreapp3.1\Razor\Views\Motorista\_Create_Edit.cshtml.g.cs

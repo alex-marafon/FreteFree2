@@ -1,4 +1,5 @@
-﻿@model FreteFree.Models.Motorista.Motorista
+﻿@using FreteFree.Models.Enum
+@model FreteFree.Models.Motorista.Motorista
 
 
 <div class="row">
@@ -22,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="TipoCaminhao" class="control-label"></label>
-                <select asp-for="TipoCaminhao" class="form-control"></select>
+                <select asp-for="TipoCaminhao" asp-items="@Html.GetEnumSelectList<TipoCaminhao>()" class="form-control"></select>
                 <span asp-validation-for="TipoCaminhao" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -37,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="EstadoCavalo" class="control-label"></label>
-                <select asp-for="EstadoCavalo" class="form-control"></select>
+                <select asp-for="EstadoCavalo" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control"></select>
                 <span asp-validation-for="EstadoCavalo" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -52,7 +53,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="EstadoCarreta" class="control-label"></label>
-                <select asp-for="EstadoCarreta" class="form-control"></select>
+                <select asp-for="EstadoCarreta" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control"></select>
                 <span asp-validation-for="EstadoCarreta" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -82,7 +83,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="EstadoMotorista" class="control-label"></label>
-                <select asp-for="EstadoMotorista" class="form-control"></select>
+                <select asp-for="EstadoMotorista"  asp-items="@Html.GetEnumSelectList<UF>()" class="form-control"></select>
                 <span asp-validation-for="EstadoMotorista" class="text-danger"></span>
             </div>
             <div class="form-group">

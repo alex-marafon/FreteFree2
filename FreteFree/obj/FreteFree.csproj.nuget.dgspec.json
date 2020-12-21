@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\FreteFree.csproj": {}
+    "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\FreteFree.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\FreteFree.csproj": {
+    "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\FreteFree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
+        "projectUniqueName": "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
         "projectName": "FreteFree",
-        "projectPath": "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
+        "projectPath": "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
         "packagesPath": "C:\\Users\\Trut4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\obj\\",
+        "outputPath": "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

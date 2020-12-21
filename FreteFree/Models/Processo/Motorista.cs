@@ -101,11 +101,8 @@ namespace FreteFree.Models.Motorista
 
         public bool Ativo { get; set; }
 
-       
-
 
         public virtual ICollection<Motorista> Motoristas { get; set; }
-        //   public virtual ICollection<Motorista> motorista { get; set; }
 
 
     }

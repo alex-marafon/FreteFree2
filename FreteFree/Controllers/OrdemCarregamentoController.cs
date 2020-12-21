@@ -22,7 +22,9 @@ namespace FreteFree.Controllers
         // GET: OrdemCarregamento
         public async Task<IActionResult> Index()
         {
-            var freteFreeContext = _context.OrdemCarregamento.Include(o => o.Empresa);
+            var freteFreeContext = _context.OrdemCarregamento.Include(o => o.Empresa).Include(o => o.Motorista);
+
+
             return View(await freteFreeContext.ToListAsync());
         }
 
@@ -36,6 +38,7 @@ namespace FreteFree.Controllers
 
             var ordemCarregamento = await _context.OrdemCarregamento
                 .Include(o => o.Empresa)
+                .Include(o => o.Motorista)
                 .FirstOrDefaultAsync(m => m.OrdemCarregamentoId == id);
             if (ordemCarregamento == null)
             {
@@ -48,16 +51,17 @@ namespace FreteFree.Controllers
         // GET: OrdemCarregamento/Create
         public IActionResult Create()
         {
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa");
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa");
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista");
             return View();
         }
 
         // POST: OrdemCarregamento/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OrdemCarregamentoId,EmpresaId,MotoristaId,Valor,Medida,DataOrdemCarregamento,Ativo")] OrdemCarregamento ordemCarregamento)
+        public async Task<IActionResult> Create([Bind("OrdemCarregamentoId,EmpresaId,MotoristaId,Valor,Medida,DataOrdemCarregamento")] OrdemCarregamento ordemCarregamento)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +69,8 @@ namespace FreteFree.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 
@@ -82,16 +87,17 @@ namespace FreteFree.Controllers
             {
                 return NotFound();
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 
         // POST: OrdemCarregamento/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OrdemCarregamentoId,EmpresaId,MotoristaId,Valor,Medida,DataOrdemCarregamento,Ativo")] OrdemCarregamento ordemCarregamento)
+        public async Task<IActionResult> Edit(int id, [Bind("OrdemCarregamentoId,EmpresaId,MotoristaId,Valor,Medida,DataOrdemCarregamento")] OrdemCarregamento ordemCarregamento)
         {
             if (id != ordemCarregamento.OrdemCarregamentoId)
             {
@@ -118,7 +124,8 @@ namespace FreteFree.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "CidadeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["EmpresaId"] = new SelectList(_context.Empresa, "EmpresaId", "NomeEmpresa", ordemCarregamento.EmpresaId);
+            ViewData["MotoristaId"] = new SelectList(_context.Motorista, "MotoristaId", "NomeMotorista", ordemCarregamento.MotoristaId);
             return View(ordemCarregamento);
         }
 
@@ -132,6 +139,7 @@ namespace FreteFree.Controllers
 
             var ordemCarregamento = await _context.OrdemCarregamento
                 .Include(o => o.Empresa)
+                .Include(o => o.Motorista)
                 .FirstOrDefaultAsync(m => m.OrdemCarregamentoId == id);
             if (ordemCarregamento == null)
             {
@@ -158,3 +166,4 @@ namespace FreteFree.Controllers
         }
     }
 }
+

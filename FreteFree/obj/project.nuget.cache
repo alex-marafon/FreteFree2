@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5Rkj6ujltOej4NfGjDFyN8JS4tjgPSMnD+3I0mESuJvUTQR4koXr5w83wBzU2k9YSWytNw4qMm+/xGI0M4Z6iw==",
+  "dgSpecHash": "c2TVC+wwuLY/FU0dO3f8tcWDoOfpm1pDm7X916k8Gz7O1rzq1kApA//uCo6xYfX1sjeTmlgEfBsBbvYOPUsCVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Trut4\\Source\\Repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
+  "projectFilePath": "C:\\Users\\Trut4\\source\\repos\\FreteFree2\\FreteFree\\FreteFree.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
