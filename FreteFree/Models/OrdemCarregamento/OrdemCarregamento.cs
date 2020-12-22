@@ -11,9 +11,9 @@ namespace FreteFree.Models.Motorista
 {
     public class OrdemCarregamento
     {
-        public OrdemCarregamento( DateTime DataOrdemCarregamento)
+        public OrdemCarregamento()
         {
-            DataOrdemCarregamento = DateTime.Now;
+           DateTime DataOrdemCarregamento = DateTime.Now;
      
         }
 
@@ -33,9 +33,9 @@ namespace FreteFree.Models.Motorista
         public int MotoristaId { get; set; }
         public Motorista Motorista { get; set; }
 
-
         [Required(ErrorMessage = "Infome o Valor")]
         [Display(Name = "Valor")]
+        [DisplayFormat(DataFormatString = "{0:C}")]
         public decimal Valor { get; set; }
 
         [Required(ErrorMessage = "Infome o Tipo de Medida")]
@@ -45,6 +45,13 @@ namespace FreteFree.Models.Motorista
         [Required(ErrorMessage = "Infome a Data")]
         [Display(Name = " Data")]
         public DateTime DataOrdemCarregamento { get; set; }
+
+        [Required(ErrorMessage = "Destino")]
+        public string Destino { get; set; }
+
+        [Required(ErrorMessage = "Infome a Data")]
+        [Display(Name = " Tipo Carga")]
+        public string TipoCarga { get; set; }
 
         public bool Ativo { get; set; }
 

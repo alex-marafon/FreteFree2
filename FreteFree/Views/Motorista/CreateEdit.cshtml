@@ -1,0 +1,164 @@
+﻿@model FreteFree.Models.Motorista.Motorista
+@using FreteFree.Models.Enum
+
+
+
+
+
+<div class="col-md-4">
+    <div class="form-group">
+        <input asp-for="CaminhaoProprietario" placeholder="Proprietario Caminhão" class="form-control" />
+        <span asp-validation-for="CaminhaoProprietario" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="form-group">
+        <input asp-for="EnderecoProprietario" placeholder="Endereco Proprietario" class="form-control" />
+        <span asp-validation-for="EnderecoProprietario" class="text-danger"></span>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="form-group">
+        <input asp-for="TelefoneProprietario" placeholder="Telefone Proprietario" class="form-control" />
+        <span asp-validation-for="TelefoneProprietario" class="text-danger"></span>
+    </div>
+</div>
+            </div>
+
+
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <select asp-for="TipoCaminhao" asp-items="@Html.GetEnumSelectList<TipoCaminhao>()" class="form-control">
+                <option default>Escolha um Tipo de Caminhao</option>
+            </select>
+            <span asp-validation-for="TipoCaminhao" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="PlacaCavalo" placeholder="Placa Cavalo" class="form-control" />
+            <span asp-validation-for="PlacaCavalo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="CidadeCavalo" placeholder="Cidade Cavalo" class="form-control" />
+            <span asp-validation-for="CidadeCavalo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <select asp-for="EstadoCavalo" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control">
+                <option default>Estado do Cavalo</option>
+            </select>
+            <span asp-validation-for="EstadoCavalo" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="PlacaCarreta" placeholder="Placa Carreta" class="form-control" />
+            <span asp-validation-for="PlacaCarreta" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="CidadeCarreta" placeholder="Cidade Carreta" class="form-control" />
+            <span asp-validation-for="CidadeCarreta" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <select asp-for="EstadoCarreta" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control">
+                <option default>Estado Carreta</option>
+            </select>
+            <span asp-validation-for="EstadoCarreta" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="NomeMotorista" placeholder="Nome Motorista" class="form-control" />
+            <span asp-validation-for="NomeMotorista" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="EnderecoMotorista" placeholder="Endereco Motorista" class="form-control" />
+            <span asp-validation-for="EnderecoMotorista" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="TelefoneMovel" placeholder="Telefone Celular" class="form-control" />
+            <span asp-validation-for="TelefoneMovel" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="TelefoneFixo" placeholder="Telefone Fixo" class="form-control" />
+            <span asp-validation-for="TelefoneFixo" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="CidadeMotorista" placeholder="CidadeMotorista" class="form-control" />
+            <span asp-validation-for="CidadeMotorista" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <select asp-for="EstadoMotorista" asp-items="@Html.GetEnumSelectList<UF>()" class="form-control">
+                <option default>Estado Motorista</option>
+            </select>
+            <span asp-validation-for="EstadoMotorista" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="CPFMotorista" placeholder="CPF Motorista" class="form-control" />
+            <span asp-validation-for="CPFMotorista" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="RGMotorista" placeholder="RG Motorista" class="form-control" />
+            <span asp-validation-for="RGMotorista" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group">
+            <input asp-for="CNPJ" placeholder="CNPJ" class="form-control" />
+            <span asp-validation-for="CNPJ" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group form-check">
+            <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+            <label class="form-check-label">
+                Cadastro Ativo
+            </label>
+
+        </div>
+    </div>

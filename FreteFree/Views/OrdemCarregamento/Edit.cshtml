@@ -1,5 +1,5 @@
 ﻿@model FreteFree.Models.Motorista.OrdemCarregamento
-
+@using FreteFree.Models.Enum
 @{
     ViewData["Title"] = "Edit";
 }
@@ -8,7 +8,57 @@
 
 <h4>OrdemCarregamento</h4>
 <hr />
-<partial name="_Create_Edite" />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OrdemCarregamentoId" />
+            <div class="form-group">
+                <label asp-for="EmpresaId" class="control-label"></label>
+                <select asp-for="EmpresaId" class="form-control" asp-items="ViewBag.EmpresaId"></select>
+                <span asp-validation-for="EmpresaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotoristaId" class="control-label"></label>
+                <select asp-for="MotoristaId" class="form-control" asp-items="ViewBag.MotoristaId"></select>
+                <span asp-validation-for="MotoristaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medida" class="control-label"></label>
+                <select asp-for="Medida" asp-items="@Html.GetEnumSelectList<Medida>()" class="form-control"></select>
+                <span asp-validation-for="Medida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataOrdemCarregamento" class="control-label"></label>
+                <input asp-for="DataOrdemCarregamento" class="form-control" />
+                <span asp-validation-for="DataOrdemCarregamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destino" class="control-label"></label>
+                <input asp-for="Destino" class="form-control" />
+                <span asp-validation-for="Destino" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoCarga" class="control-label"></label>
+                <input asp-for="TipoCarga" class="form-control" />
+                <span asp-validation-for="TipoCarga" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Ativo" /> @Html.DisplayNameFor(model => model.Ativo)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
 <div>
     <a asp-action="Index">Back to List</a>

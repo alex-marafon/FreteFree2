@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FreteFree.Migrations
 {
     [DbContext(typeof(FreteFreeContext))]
-    [Migration("20201220022804_Inicial")]
-    partial class Inicial
+    [Migration("20201222005946_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -123,6 +123,10 @@ namespace FreteFree.Migrations
                     b.Property<DateTime>("DataOrdemCarregamento")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Destino")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(100)");
+
                     b.Property<int>("EmpresaId")
                         .HasColumnType("int");
 
@@ -131,6 +135,10 @@ namespace FreteFree.Migrations
 
                     b.Property<int>("MotoristaId")
                         .HasColumnType("int");
+
+                    b.Property<string>("TipoCarga")
+                        .IsRequired()
+                        .HasColumnType("NVARCHAR(100)");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("decimal(20)");

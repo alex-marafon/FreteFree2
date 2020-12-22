@@ -1,0 +1,183 @@
+﻿@model FreteFree.Models.Motorista.OrdemCarregamento
+
+<style>
+
+
+    table.table {
+        line-height: 9pt;
+        border: "0";
+        width: "100%";
+    }
+
+    table.limi {
+        width: 17cm;
+        line-height: 9pt;
+    }
+
+    td.limite {
+        border: solid windowtext .5pt;
+        padding: 5.65pt 5.65pt 5.65pt 5.65pt
+    }
+</style>
+
+<div align="center">
+    <div class="container content-wrapper">
+        <div class="conteudo">
+            <div class="row">
+                <div class="col-md-12 content">
+                    <div class="row">
+                        <div class="col-md-12" align="center">
+                            <h2>Ordem de Carregamento e Recibo</h2>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="principal">
+                                <table id="limi" border="1" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <td id="limite">
+                                                <table id="tabla">
+                                                    <!-- <tbody><tr> -->
+                                                    <td valign="middle" align="left" width="60" height="60">
+                                                        <img width="100" height="80" src="download.png" alt="Brasão" border="0">
+                                                    </td>
+                                                    <div id="folha">
+                                                        <td id="folha" align="center">
+
+                                                            <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p>
+
+                                                            <font face="Arial" size="4">
+                                                                <b>
+                                                                    ORDEM DE CARREGAMENTO
+                                                                </b>
+                                                            </font>
+
+                                                            <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p>
+
+                                                            <!-- <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p> -->
+
+                                                            <font face="Arial">
+                                                                <b>
+                                                                    BETÃO
+                                                                </b>
+                                                            </font>
+                                                            <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p>
+
+                                                            <font face="Arial">
+                                                                <b>
+                                                                    TEMOS CARGA PARA TODO PAÍS
+                                                                </b>
+                                                            </font>
+                                                            <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p>
+
+                                                            <font face="Arial" style="font-size: 8pt">
+                                                                <b>
+                                                                    RUA JOÃO PEDRO MOREIRA DE VARVALHO - Fone: 3531-7600 Cep: 78555-000 SINOP/MT
+                                                                </b>
+                                                            </font>
+
+                                                            <!-- <p style="margin:0cm; margin-bottom:0pt;">&nbsp;</p> -->
+
+                                                        </td>
+                                                    </div>
+                                                    <td valign="right" align="center" width="20" height="40">
+
+                                                    <td id="borda" width="1%" valign="left" style="
+                                            BORDER-RIGHT: windowtext 0.5pt solid;
+                                            BORDER-TOP: windowtext 0.5pt solid;
+                                            BORDER-LEFT: windowtext 0.5pt solid;
+                                            BORDER-BOTTOM: windowtext 0.5pt solid;
+                                            PADDING-LEFT: 1.5pt;
+                                            padding-bottom: 3.5pt;
+                                            ">
+
+                                                        <center>
+                                                            <font face="Arial" style="font-size:8pt">
+                                                                Ordem de Carregamento Nº:
+                                                            </font>
+                                                            <br><br><br>
+                                                            <font face="Arial" style="font-size: 12pt">
+                                                                <b> @Html.DisplayFor(modelItem => item.OrdemCarregamentoId)</b>
+                                                            </font>
+                                                            <br>
+                                                    </td>
+                                        </tr>
+                                        </center>
+                                    </tbody>
+                                </table>
+                                <!-- Fim Cabeçalho do Cartão -->
+                                <hr>
+                                <!-- Coluna 1 -->
+                                <p style="margin:0cm; margin-bottom:0pt;"></p>
+                                <table border="0" width="100%">
+                                    <tbody>
+                                    <td width="60%" valign="top">
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b> Solicitamos ao Sr: <u>  vari  </u></b>
+                                        </font><br>
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>da Empresa:<u>  vari  </u></b>
+                                        </font>
+                                    </td>
+                                    <td width="2%" border="0"> </td>
+                                    <!-- Coluna 2 -->
+                                    <td width="60%" valign="top">
+
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Fone:<u>  vari  </u> </b>
+                                        </font><br>
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Cidade:<u>  vari  </u></b>
+                                        </font>
+                                    </td>
+                                </table>
+                                <!-- Coluna 1 -->
+                                <table border="0" width="100%">
+                                    <tbody>
+                                    <td width="45%" valign="top">
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b><u></u> Solicitamos ao Sr: <u>  vari  </u></b>
+                                        </font><br>
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>da Empresa: <u>  vari  </u></b>
+                                        </font>
+                                    </td>
+                                    <td width="2%" border="0"> </td>
+
+                                    <!-- Coluna 2 -->
+
+                                    <td width="25%" valign="top">
+
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Fone: <u>  vari  </u> </b>
+                                        </font><br>
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Cidade: <u>  vari  </u></b>
+                                        </font>
+
+                                    </td>
+                                    <td width="2%" border="0"> </td>
+                                    <!-- Coluna 2 -->
+
+                                    <td width="25%" valign="top">
+
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Fone: <u>  vari  </u></b>
+                                        </font><br>
+                                        <font face="Arial" style="font-size: 8pt">
+                                            <b>Cidade:<u>  vari  </u></b>
+                                        </font>
+
+                                    </td>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

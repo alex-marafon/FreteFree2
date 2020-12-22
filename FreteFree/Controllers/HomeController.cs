@@ -52,6 +52,25 @@ namespace FreteFree.Controllers
 
             var ordemCarregamento = await _context.OrdemCarregamento
                 .Include(o => o.Empresa)
+                .Include(o => o.Motorista)
+                .FirstOrDefaultAsync(m => m.OrdemCarregamentoId == id);
+            if (ordemCarregamento == null)
+            {
+                return NotFound();
+            }
+
+            return View(ordemCarregamento);
+        }
+        public async Task<IActionResult> Impressao(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var ordemCarregamento = await _context.OrdemCarregamento
+                .Include(o => o.Empresa)
+                .Include(o => o.Motorista)
                 .FirstOrDefaultAsync(m => m.OrdemCarregamentoId == id);
             if (ordemCarregamento == null)
             {

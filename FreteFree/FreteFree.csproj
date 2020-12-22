@@ -15,6 +15,16 @@
     <Compile Remove="Migrations\20201219134333_Inicial.Designer.cs" />
     <Compile Remove="Migrations\20201219135042_Inicial.cs" />
     <Compile Remove="Migrations\20201219135042_Inicial.Designer.cs" />
+    <Compile Remove="Migrations\20201220022804_Inicial.cs" />
+    <Compile Remove="Migrations\20201220022804_Inicial.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\novo.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Home\novo.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

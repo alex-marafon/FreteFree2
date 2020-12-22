@@ -4,11 +4,29 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+
 
 <h4>Motorista</h4>
 <hr />
-<partial name="_Create_Edit" />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+            <div class="row">
+                <partial name="CreateEdit" />
+
+
+
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

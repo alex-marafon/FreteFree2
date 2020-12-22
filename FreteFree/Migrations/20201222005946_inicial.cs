@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FreteFree.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class inicial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -83,6 +83,8 @@ namespace FreteFree.Migrations
                     Valor = table.Column<decimal>(type: "decimal(20)", nullable: false),
                     Medida = table.Column<int>(nullable: false),
                     DataOrdemCarregamento = table.Column<DateTime>(nullable: false),
+                    Destino = table.Column<string>(type: "NVARCHAR(100)", nullable: false),
+                    TipoCarga = table.Column<string>(type: "NVARCHAR(100)", nullable: false),
                     Ativo = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>

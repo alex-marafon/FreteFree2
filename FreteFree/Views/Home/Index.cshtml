@@ -1,5 +1,4 @@
 ﻿
-
 @model IEnumerable<FreteFree.Models.Motorista.OrdemCarregamento>
 
 @{
@@ -56,7 +55,7 @@
                     @Html.DisplayFor(modelItem => item.DataOrdemCarregamento)
                 </td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@item.OrdemCarregamentoId">Detalhado</a> |
+                    <a asp-action="Impressao" asp-route-id="@item.OrdemCarregamentoId">Imprimir</a> |
                 </td>
             </tr>
         }

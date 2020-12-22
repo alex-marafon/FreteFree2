@@ -13,6 +13,9 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.DataCadastoMotorista)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CaminhaoProprietario)
             </th>
             <th>
@@ -72,15 +75,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Ativo)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataCadastoMotorista)
-            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastoMotorista)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CaminhaoProprietario)
             </td>
@@ -140,9 +143,6 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Ativo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataCadastoMotorista)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MotoristaId">Edit</a> |
